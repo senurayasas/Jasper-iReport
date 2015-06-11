@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="EMPLOYEE_ID" class="java.lang.String"/>
+	<field name="FIRST_NAME" class="java.lang.String"/>
+	<field name="LAST_NAME" class="java.lang.String"/>
+	<field name="SALARY" class="java.lang.String"/>
+	<group name="EMPLOYEE_ID">
+		<groupExpression><![CDATA[$F{EMPLOYEE_ID}]]></groupExpression>
+	</group>
+	<group name="FIRST_NAME">
+		<groupExpression><![CDATA[$F{FIRST_NAME}]]></groupExpression>
+	</group>
+	<group name="LAST_NAME">
+		<groupExpression><![CDATA[$F{LAST_NAME}]]></groupExpression>
+	</group>
+	<group name="SALARY">
+		<groupExpression><![CDATA[$F{SALARY}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="309" height="32"/>
+				<textElement>
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[Employee Detail Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="49" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="17" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[Employee No]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="17" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[First Name]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="17" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[Salary]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="17" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[Last Name]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="114" y="16" width="13" height="21"/>
+				<sr:sort xmlns:sr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sr:symbol handlerColor="#000000" handlerHorizontalAlign="Center" handlerVerticalAlign="Middle"/>
+				</sr:sort>
+			</componentElement>
+			<componentElement>
+				<reportElement x="249" y="16" width="13" height="21"/>
+				<sr:sort xmlns:sr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sr:symbol handlerColor="#000000" handlerHorizontalAlign="Center" handlerVerticalAlign="Middle"/>
+				</sr:sort>
+			</componentElement>
+			<componentElement>
+				<reportElement x="382" y="16" width="13" height="21"/>
+				<sr:sort xmlns:sr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sr:symbol handlerColor="#000000" handlerHorizontalAlign="Center" handlerVerticalAlign="Middle"/>
+				</sr:sort>
+			</componentElement>
+			<componentElement>
+				<reportElement x="529" y="17" width="13" height="21"/>
+				<sr:sort xmlns:sr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<sr:symbol handlerColor="#000000" handlerHorizontalAlign="Center" handlerVerticalAlign="Middle"/>
+				</sr:sort>
+			</componentElement>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="14" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{EMPLOYEE_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="149" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FIRST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="282" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{LAST_NAME}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="429" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{field}$F{SALARY}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="22" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
